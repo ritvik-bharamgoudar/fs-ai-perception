@@ -1,8 +1,22 @@
+# ROS2 build artifacts
 build/
 install/
 log/
+
+# Python cache
 *.pyc
 __pycache__/
+
+# Third-party libraries
 ORB_SLAM3/
+ORB_SLAM3_backup/
+ORB_SLAM3_stereo_inertial/
 Pangolin/
 eigen/
+
+# ORB vocabulary files
+src/slam_example/config/ORBvoc.txt
+
+# Trajectory outputs
+CameraTrajectory.txt
+
