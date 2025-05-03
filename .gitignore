@@ -6,6 +6,7 @@ log/
 # Python cache
 *.pyc
 __pycache__/
+<<<<<<< HEAD
 
 # Third-party libraries
 ORB_SLAM3/
@@ -19,4 +20,3 @@ src/slam_example/config/ORBvoc.txt
 
 # Trajectory outputs
 CameraTrajectory.txt
-
