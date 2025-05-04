@@ -19,9 +19,9 @@ sudo apt install libeigen3-dev libpangolin-dev libopencv-dev
 
 You’ll also need to clone and build:
 
-    ORB-SLAM3
+ORB-SLAM3
 
-    Pangolin
+Pangolin
 
 Clone them into your workspace like this:
 
@@ -35,7 +35,7 @@ Then follow this tutorial: https://medium.com/@antonioconsiglio/integrating-orb-
 
 ## Running the System
 
-    Build the workspace:
+Build the workspace:
 ```bash
 colcon build --symlink-install
 source install/setup.bash
