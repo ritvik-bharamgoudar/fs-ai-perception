@@ -15,6 +15,7 @@ Install these system packages first:
 
 ```bash
 sudo apt install libeigen3-dev libpangolin-dev libopencv-dev
+```
 
 You’ll also need to clone and build:
 
@@ -24,30 +25,35 @@ You’ll also need to clone and build:
 
 Clone them into your workspace like this:
 
+```bash
 cd ~/ros2_ws
 git clone https://github.com/UZ-SLAMLab/ORB_SLAM3.git
 git clone https://github.com/stevenlovegrove/Pangolin.git
+```
 
 Then follow this tutorial: https://medium.com/@antonioconsiglio/integrating-orb-slam3-with-ros2-humble-on-raspberry-pi-5-a-step-by-step-guide-78e7b911c361 to compile and integrate with ROS2.
 
 ## Running the System
 
     Build the workspace:
-
+```bash
 colcon build --symlink-install
 source install/setup.bash
-
-In each new terminal: source yourworkspace/install/setup.bash
-
+```
+In each new terminal: 
+```
+source yourworkspace/install/setup.bash
+```
 Launch simulation:
-
+```
 export EUFS_MASTER=true
 ros2 launch eufs_tracks rectangle.launch.py
-
+```
 Launch cone detection node:
-
+```
 ros2 run cone_detector cone_detector_node
-
+```
 Launch SLAM:
-
+```
 ros2 launch slam_example slam_example.launch.py
+```
