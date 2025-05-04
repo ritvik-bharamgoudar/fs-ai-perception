@@ -1,0 +1,2 @@
+*.bin filter=lfs diff=lfs merge=lfs -text
+src/slam_example/config/ORBvoc.txt filter=lfs diff=lfs merge=lfs -text

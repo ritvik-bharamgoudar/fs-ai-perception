@@ -1,0 +1,8 @@
+build/
+install/
+log/
+*.pyc
+__pycache__/
+ORB_SLAM3/
+Pangolin/
+eigen/
