@@ -26,7 +26,7 @@ Pangolin
 Clone them into your workspace like this:
 
 ```bash
-cd ~/ros2_ws
+cd ~/your_ws
 git clone https://github.com/UZ-SLAMLab/ORB_SLAM3.git
 git clone https://github.com/stevenlovegrove/Pangolin.git
 ```
@@ -42,7 +42,7 @@ source install/setup.bash
 ```
 In each new terminal: 
 ```
-source yourworkspace/install/setup.bash
+source your_ws/install/setup.bash
 ```
 Launch simulation:
 ```
