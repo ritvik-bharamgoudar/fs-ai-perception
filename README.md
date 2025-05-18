@@ -47,7 +47,7 @@ source your_ws/install/setup.bash
 Launch simulation:
 ```
 export EUFS_MASTER=true
-ros2 launch eufs_tracks rectangle.launch.py
+ros2 launch eufs_tracks rectangle.launch
 ```
 Launch cone detection node:
 ```
