@@ -6,7 +6,7 @@ ROS2-based perception pipeline for cone detection and SLAM in the EUFS sim
 
 - `cone_detector/`: Colour based (HSV) cone detection publishing cone position + colour.
 - `slam_example/`: Launch files + config to run ORB-SLAM3 using ZED2 camera simulation.
-- `eufs_sim/`: Sim environment (Boogiemanc fork but had to get plugins from official EUFS repo).
+- `eufs_sim/`: Sim environment (Boogiemanc fork but plugins from official EUFS repo).
 - `ackermann_msgs/`, `eufs_msgs/`: Dependencies for EUFS sim
 
 ## Dependencies
