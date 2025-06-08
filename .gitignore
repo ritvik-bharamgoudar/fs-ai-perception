@@ -6,8 +6,7 @@ log/
 # Python cache
 *.pyc
 __pycache__/
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 
 # Third-party libraries
 ORB_SLAM3/
