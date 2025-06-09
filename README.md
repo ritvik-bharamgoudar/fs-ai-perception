@@ -30,8 +30,6 @@ git clone https://github.com/UZ-SLAMLab/ORB_SLAM3.git
 git clone https://github.com/stevenlovegrove/Pangolin.git
 ```
 
-Then follow this tutorial: https://medium.com/@antonioconsiglio/integrating-orb-slam3-with-ros2-humble-on-raspberry-pi-5-a-step-by-step-guide-78e7b911c361 to compile and integrate with ROS2.
-
 ## Running the System
 
 Build the workspace:
