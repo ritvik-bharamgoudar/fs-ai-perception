@@ -22,4 +22,4 @@ CameraTrajectory.txt
 .DS_Store
 *.swp
 *.swo
-
+**/ORBvoc.txt

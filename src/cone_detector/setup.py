@@ -13,6 +13,7 @@ setup(
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
         ('share/' + package_name + '/msg', ['msg/DetectedCone3D.msg']),
+        ('share/' + package_name + '/models', ['models/best.pt']),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -24,6 +25,7 @@ setup(
     entry_points={
         'console_scripts': [
             'cone_detector_node = cone_detector.cone_detector_node:main',
+            'YOLO_cone_detector = cone_detector.YOLO_cone_detector:main',
         ],
     },
 )

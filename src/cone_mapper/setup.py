@@ -21,6 +21,8 @@ setup(
     entry_points={
         'console_scripts': [
 		'cone_mapper = cone_mapper.cone_mapper:main',
+        'track_generator = cone_mapper.track_generation:main',
+        'map_visual = cone_mapper.map_visual:main',
         ],
     },
 )
