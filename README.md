@@ -1,13 +1,16 @@
-Cardiff Autonomous Racing FS-AI 2025: Perception Stack
+# Cardiff Autonomous Racing FS-AI 2025: Perception Stack
 
-ROS2-based perception pipeline for cone detection, SLAM and cone mapping
+Real-time ROS2 based cone detection and mapping system for an autonomous race car.
 
-## Packages:
+## Overview
+The racetrack is unknown, lined with different colour cones and the fastest time to complete 10 laps wins. This perception system processes images from a stereo camera to detect cones, fuses stereo and IMU data to localise the car and apply transformations to create a map of the track. The rest of the autonomous stack consists of a path planning, control and car interface modules. The system runs on the IMechE ADS-DV platform with limited compute (GTX 1050Ti, 16GB RAM) while maintaining real-time performance.
 
-- `cone_detector/`: Colour based (HSV) cone detection publishing cone position + colour.
-- `slam_example/`: Launch files + config to run ORB-SLAM3 using ZED2 camera simulation.
-- `eufs_sim/`: Sim environment (Boogiemanc fork with plugins from official EUFS repo).
-- `ackermann_msgs/`, `eufs_msgs/`: Dependencies for EUFS sim
+**Packages**
+- cone_detector: utilises a trained YOLOv8 model to detect cones in camera frames and assigns 3D coordinates to cones using the ZED2i depth images
+
+- orbslam_masked: Uses ORBSLAM3 and fuses stereo vision and IMU data to localise the camera (attached to car) and publishes odometry pose of the car
+
+- cone_mapper: transforms the 3D cone coordinates in the camera frame to the world frame using the odometry pose of camera. Applies temporal filtering, KD tree matching, positional filtering to create a clean, robust map of the cones. Additionally, generates the track edges and centreline.
 
 ## Dependencies
 
@@ -59,14 +62,14 @@ ros2 run cone_detector cone_detector_node
 Launch SLAM:
 
 ```
-ros2 launch slam_example slam_example.launch.py
+ros2 launch orbslam_masked orbslam_masked.launch.py
 ```
 
 Launch cone mapping node:
 
 ```
 ros2 run cone_mapper cone_mapper
-python 3 visualise_world_cones.py
+ros2 run cone_mapper map_visual
 
 ```
 
